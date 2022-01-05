@@ -1,0 +1,40 @@
+{%extends "uiweb/base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<style>
+
+    .card{
+        margin-top:150px; ;
+        margin-bottom: 175px;
+    }
+</style>
+    <div class = 'card content-section col-md-4 mx-auto shadow p-3 mb-5 bg-white rounded'>
+        <form method ="POST" action  = "">
+            {%csrf_token %}
+            <fieldset class = "form-group">
+                <legend><center>Login</center></legend>
+                {{form | crispy}}
+            </fieldset>
+            <div class ='form-group'>
+                <button class="btn btn-outline-dark btn-block" type="submit">Log In</button>
+            </div>
+            <div>
+                <a href="{% url 'Password_Reset' %}">Forgot Password</a>
+               
+            </div>
+        </form> 
+        <div class = "border-top pt-3">
+            <small class = "text-muted">
+                Don't have an account? <a class="ml-2" href="{% url 'Store_Registration'%}">Sign Up</a>
+            </small>
+        </div>      
+    </div>
+
+    <footer style="position:fixed;bottom: 0px;left: 0;width: 100%;">
+    <div class="text-center text-white p-3" style="background-color: #444444;">
+        © 2021 Copyright:
+        <a class="text-white" href="https://sccs.com/">sccs.com</a>
+    </div>
+    </footer>
+{% endblock content %}

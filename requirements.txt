@@ -1,0 +1,33 @@
+python3-testresources
+pillow
+django
+django-widget-tweaks
+django-crispy-forms
+certifi>=2020.4.5.1
+cffi>=1.14.0
+chardet>=3.0.4
+cryptography
+idna
+pycosat
+pycparser
+pyOpenSSL
+PySocks
+pyusb
+qrcode
+requests
+ruamel-yaml
+six
+tqdm
+urllib3                    
+wheel
+django-widget-tweaks
+django-crispy-forms
+numpy
+conda
+conda-manager
+opencv-python
+tensorflow-cpu
+twilio>=6.32.0
+
+# cat requirements.txt | xargs -n 1 -L 1 pip install
+# sudo apt-get install libgl1
